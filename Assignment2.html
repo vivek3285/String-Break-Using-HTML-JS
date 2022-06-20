@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>AssignmentQ2
+</title>
+
+</head>
+<body>
+<center>
+<label for ="string1"> Enter a Name: </label>
+<input type ="text"  id ="string1" placeholder="Enter text" ><br>
+<label for ="char1"> Enter a char: </label>
+<input type ="text"  id ="char1" placeholder="Ente char" maxlength=1><br>
+<input type ="button" id="btn1" value="Result" >
+<p id="output"></p>
+</center>
+<script>
+const txt1 = document.getElementById("string1");
+const btn1 = document.getElementById("btn1");
+const char1 = document.getElementById("char1");
+const out1 = document.getElementById("output");
+function fun1()
+{
+//out1.innerHTML = txt1.value;
+let v;
+let str = txt1.value;
+let c=char1.value;
+for (let i = 0; i < str.length; i++) {
+  if((str.charAt(i)) === c){
+   v=i;
+   break;
+  }
+ }
+ let txt="";
+  for (let j = v+1; j <str.length; j++)
+  {
+   txt= txt + str.charAt(j);
+  }
+  out1.innerHTML = txt;
+  }
+btn1.addEventListener('click',fun1);
+</script>
+</body>
+</html>
+
